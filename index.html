@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gacha Kartu Bola</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gacha Kartu Bola</h1>
+      <div id="currency" class="currency-container">
+        <img src="img/Koin.png" alt="Mata Uang" class="currency-icon" />
+        <p>Uang Anda: <span id="currencyAmount">5.000</span> koin</p>
+      </div>
+      <button onclick="rollGacha()">Gacha (20 koin)</button>
+      <div id="result"></div>
+      <h2>Koleksi Kartu Anda</h2>
+      <div id="collection" class="collection"></div>
+      <div id="squad">
+        <h2>Susunan Skuad - Formasi 4-3-3</h2>
+        <div class="formation formation-433">
+          <div class="position" data-position="GK"></div>
+          <div class="position" data-position="LB"></div>
+          <div class="position" data-position="CB1"></div>
+          <div class="position" data-position="CB2"></div>
+          <div class="position" data-position="RB"></div>
+          <div class="position" data-position="LM"></div>
+          <div class="position" data-position="CM"></div>
+          <div class="position" data-position="RM"></div>
+          <div class="position" data-position="LW"></div>
+          <div class="position" data-position="ST"></div>
+          <div class="position" data-position="RW"></div>
+        </div>
+      </div>
+      <h2>Misi</h2>
+      <div id="missions" class="missions"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

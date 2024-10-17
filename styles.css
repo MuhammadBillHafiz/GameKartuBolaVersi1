@@ -1,0 +1,340 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffaa00;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.currency-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.currency-icon {
+  width: 40px;
+  height: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.fade-in.show {
+  opacity: 2;
+}
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-group {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+  padding: 10px;
+}
+
+.team-group h3 {
+  margin: 0;
+  background: #007bff;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.team-group .team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background: #fff;
+  width: 300px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card-details {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-details img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-details h3 {
+  margin: 10px 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.stats div {
+  background: #f8f8f8;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.missions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.mission {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background: #ff0000;
+  padding: 10px;
+  text-align: left;
+}
+
+.mission.completed {
+  background: #00ff0d;
+  text-decoration: line-through;
+}
+
+.logo {
+  width: 500px; /* Ukuran logo */
+  margin-bottom: 100px;
+  vertical-align: middle; /* Penjajaran vertikal */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 80px;
+  }
+
+  .card p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 60px;
+  }
+
+  .card p {
+    font-size: 0.6rem;
+  }
+
+  #currency-display {
+    font-size: 1.2rem;
+  }
+
+  .fade-in img {
+    width: 60px;
+    height: auto;
+  }
+}
+
+.card-draggable {
+  cursor: pointer;
+}
+
+.formation-433 {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  background: #006400; /* Hijau seperti lapangan sepak bola */
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.position {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.position img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 10%;
+}
+
+.formation-433 .position[data-position="GK"] {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.formation-433 .position[data-position="LB"] {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+}
+
+.formation-433 .position[data-position="CB1"] {
+  position: absolute;
+  bottom: 20%;
+  left: 30%;
+}
+
+.formation-433 .position[data-position="CB2"] {
+  position: absolute;
+  bottom: 20%;
+  right: 30%;
+}
+
+.formation-433 .position[data-position="RB"] {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+}
+
+.formation-433 .position[data-position="LM"] {
+  position: absolute;
+  bottom: 45%;
+  left: 15%;
+}
+
+.formation-433 .position[data-position="CM"] {
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.formation-433 .position[data-position="RM"] {
+  position: absolute;
+  bottom: 45%;
+  right: 15%;
+}
+
+.formation-433 .position[data-position="LW"] {
+  position: absolute;
+  bottom: 70%;
+  left: 5%;
+}
+
+.formation-433 .position[data-position="ST"] {
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.formation-433 .position[data-position="RW"] {
+  position: absolute;
+  bottom: 70%;
+  right: 5%;
+}
+
+@media (max-width: 768px) {
+  .formation-433 {
+    height: 400px;
+  }
+
+  .position {
+    width: 60px;
+    height: 60px;
+  }
+
+  .position img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formation-433 {
+    height: 300px;
+  }
+
+  .position {
+    width: 50px;
+    height: 50px;
+  }
+
+  .position img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
